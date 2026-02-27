@@ -32,11 +32,11 @@
 - 구글 로그인
 
 ## github Repository
-- 프론트엔드: [https://github.com/아이디/shoes-frontend](https://github.com/alsdudrj/react-project)
-- 백엔드: [https://github.com/아이디/shoes-backend](https://github.com/alsdudrj/react-project-back)
+- 프론트엔드: [링크](https://github.com/alsdudrj/react-project)
+- 백엔드: [링크](https://github.com/alsdudrj/react-project-back)
 
 ## 호스팅 주소
-- https://react-project-14mq.vercel.app/
+- [링크]https://react-project-14mq.vercel.app/
 
 ## 주요 기능
 - 회원가입 / 로그인
