@@ -14,7 +14,6 @@
 - 상품 페이지네이션
 - 상품 상세 페이지 리뷰 및 별점
 - 주문시 관리자 배송관리 및 고객 주문 추적
-- 
 
 ## 기술 스택
 ### Frontend
@@ -23,9 +22,21 @@
 ### Backend
 - Spring Boot
 
+### Hosting Server
+- 프론트엔드: Vercel
+- 백엔드: Render
+- DB: Postgres DB (SupaBase)
+
+### 사용된 API
+- 카카오 로그인 / 페이 / 주소검색
+- 구글 로그인
+
 ## github Repository
 - 프론트엔드: [https://github.com/아이디/shoes-frontend](https://github.com/alsdudrj/react-project)
 - 백엔드: [https://github.com/아이디/shoes-backend](https://github.com/alsdudrj/react-project-back)
+
+## 호스팅 주소
+- https://react-project-14mq.vercel.app/
 
 ## 주요 기능
 - 회원가입 / 로그인
@@ -33,16 +44,17 @@
 - 상품 상세 페이지
 - 장바구니
 - 주문 기능
-- 관리자 상품 등록
+- 관리자 상품 관리
 
-## 🖼 화면 예시
+## 화면 예시
 (스크린샷 이미지)
 
-## 🔍 프로젝트 구조
+## 프로젝트 구조
 Frontend: SPA 구조  
 Backend: REST API 기반
 
-## 💡 개발하면서 배운 점
+## 개발하면서 배운 점
 - REST API 설계 경험
 - 상태 관리 흐름 이해
 - 로그인 인증 처리 경험
+- 외부 API 사용 경험
