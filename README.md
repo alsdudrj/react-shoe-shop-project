@@ -36,7 +36,7 @@
 - 백엔드: [링크](https://github.com/alsdudrj/react-project-back)
 
 ## 호스팅 주소
-- [링크]https://react-project-14mq.vercel.app/
+- [링크](https://react-project-14mq.vercel.app/)
 
 ## 주요 기능
 - 회원가입 / 로그인
