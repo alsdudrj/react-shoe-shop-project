@@ -22,6 +22,10 @@
 ### Backend
 - Spring Boot
 
+## 프로젝트 구조
+Frontend: SPA 구조  
+Backend: REST API 기반
+
 ### Hosting Server
 - 프론트엔드: Vercel
 - 백엔드: Render
@@ -88,7 +92,3 @@
 ![상품수정및삭제](gif/상품수정및삭제.gif)
 
 </details>
-
-## 프로젝트 구조
-Frontend: SPA 구조  
-Backend: REST API 기반
