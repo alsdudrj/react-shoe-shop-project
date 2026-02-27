@@ -54,20 +54,40 @@
 
 </details>
 
-### 소셜 로그인
+<details>
+<summary>소셜 로그인</summary>
+  
 ![소셜로그인](gif/소셜로그인.gif)
 
-### 회원정보 수정 및 장바구니 상품 추가
+</details>
+
+<details>
+<summary>회원정보 수정 및 장바구니 상품 추가</summary>
+  
 ![정보수정및장바구니](gif/정보수정및장바구니.gif)
 
-### 카카오 페이 테스트 결제
+</details>
+
+<details>
+<summary>카카오 페이 테스트 결제</summary>
+  
 ![결제](gif/결제.gif)
 
-### 상품추가
+</details>
+
+<details>
+<summary>상품추가</summary>
+  
 ![상품추가](gif/상품추가.gif)
 
-### 상품수정 및 삭제
+</details>
+
+<details>
+<summary>상품수정 및 삭제</summary>
+  
 ![상품수정및삭제](gif/상품수정및삭제.gif)
+
+</details>
 
 ## 프로젝트 구조
 Frontend: SPA 구조  
