@@ -49,7 +49,9 @@
 ## 화면 예시
 <details>
 <summary>회원가입 및 로그인</summary>
+  
 ![로그인](gif/로그인.gif)
+
 </details>
 
 ### 소셜 로그인
