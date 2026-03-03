@@ -104,14 +104,7 @@ graph TD
     end
 
     subgraph "Backend (Render)"
-        SpringBoot[Spring Boot Server
-                  회원가입 / 로그인
-                  상품 목록 조회
-                  상품 상세 페이지
-                  장바구니
-                  주문 기능
-                  관리자 상품 관리
-                  ]
+        SpringBoot[Spring Boot Server]
     end
 
     subgraph "Database (Supabase)"
