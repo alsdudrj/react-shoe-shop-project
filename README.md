@@ -94,7 +94,7 @@ Backend: REST API 기반
 
 </details>
 
-### 시스템 구성도
+## 시스템 구성도
 ```mermaid
 graph TD
     User((사용자))
