@@ -93,3 +93,33 @@ Backend: REST API 기반
 ![상품수정및삭제](gif/상품수정및삭제.gif)
 
 </details>
+
+### 시스템 구성도
+```mermaid
+graph TD
+    User((사용자))
+    
+    subgraph "Frontend (Vercel)"
+        React[React SPA]
+    end
+
+    subgraph "Backend (Render)"
+        SpringBoot[Spring Boot Server]
+    end
+
+    subgraph "Database (Supabase)"
+        DB[(PostgreSQL)]
+    end
+
+    subgraph "External APIs"
+        Kakao[Kakao Login/Pay/Address]
+        Google[Google Login]
+    end
+
+    User -->|접속| React
+    React <-->|REST API / JWT| SpringBoot
+    SpringBoot <-->|JPA| DB
+    React <--> Kakao
+    React <--> Google
+    SpringBoot <--> Kakao
+```
