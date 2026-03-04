@@ -125,6 +125,15 @@ graph TD
     SpringBoot <-->|Spring Data JPA| DB
     
     React -- "주소 검색" --> Kakao
+
+    React -- "인증 요청" --> Kakao
+    React -- "인증 요청" --> OAuth
+
+    Kakao -- "인증 코드/토큰 전달" --> React
+    OAuth -- "인증 코드/토큰 전달" --> React
+
+    React -- "검증 요청" --> SpringBoot
+
     SpringBoot -- "토큰 검증" --> OAuth
     SpringBoot -- "결제 승인/토큰 검증" --> Kakao
     
