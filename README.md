@@ -101,19 +101,17 @@ graph TD
     
     subgraph "Frontend (Vercel)"
         React[React SPA]
-        Hook[Custom Hooks: useToken, useKakaoAddress]
-        State[State Management: shoes, userRole]
     end
 
     subgraph "Backend (Render)"
         SpringBoot[Spring Boot Server]
         Security[Spring Security + JWT Filter]
-        Controller[REST Controllers: Item, User, Order]
+        Controller[REST Controllers]
     end
 
-    subgraph "Database (Supabase / AWS S3)"
+    subgraph "Database (Supabase)"
         DB[(PostgreSQL)]
-        S3[(Image Storage / imgUrl)]
+        Storage[(Image Storage / imgUrl)]
     end
 
     subgraph "External Services"
@@ -121,17 +119,14 @@ graph TD
         OAuth[Google OAuth 2.0]
     end
 
-    %% 연결 관계
     User -->|HTTPS 접속| React
     React <-->|Axios: JWT in Header| Security
     Security <-->|Validation| SpringBoot
     SpringBoot <-->|Spring Data JPA| DB
     
-    %% 외부 API 상세 흐름
     React -- "주소 검색" --> Kakao
     React -- "로그인 요청" --> OAuth
     SpringBoot -- "결제 승인/토큰 검증" --> Kakao
     
-    %% 데이터 흐름 추가
     React -.->|sessionStorage| Sidebar[최근 본 상품]
 ```
