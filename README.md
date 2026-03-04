@@ -120,12 +120,12 @@ graph TD
     end
 
     User -->|HTTPS 접속| React
-    React <-->|Axios: JWT in Header| Security
+    React <-->|JWT in Header| Security
     Security <-->|Validation| SpringBoot
     SpringBoot <-->|Spring Data JPA| DB
     
     React -- "주소 검색" --> Kakao
-    React -- "로그인 요청" --> OAuth
+    SpringBoot -- "토큰 검증" --> OAuth
     SpringBoot -- "결제 승인/토큰 검증" --> Kakao
     
     React -.->|sessionStorage| Sidebar[최근 본 상품]
