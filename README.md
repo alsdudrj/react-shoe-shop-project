@@ -101,45 +101,32 @@ graph TD
     
     subgraph "Frontend (Vercel)"
         React[React SPA]
-        Hook[Custom Hooks: useToken, useKakaoAddress]
-        State[State Management: shoes, userRole]
     end
 
     subgraph "Backend (Render)"
         SpringBoot[Spring Boot Server]
         Security[Spring Security + JWT Filter]
-        OAuth2[OAuth2 Client: Google/Kakao Logic]
-        Controller[REST Controllers: Item, User, Order]
+        Controller[REST Controllers]
     end
 
     subgraph "Database (Supabase)"
         DB[(PostgreSQL)]
+        Storage[(Image Storage / imgUrl)]
     end
 
-    subgraph "External Identity Providers"
-        Kakao[Kakao API: Login/Pay/Address]
-        Google[Google Cloud: OAuth 2.0]
+    subgraph "External Services"
+        Kakao[Kakao: Login/Pay/Address API]
+        OAuth[Google OAuth 2.0]
     end
 
-    %% 연결 관계
-    User -->|접속/로그인 클릭| React
+    User -->|HTTPS 접속| React
+    React <-->|Axios: JWT in Header| Security
+    Security <-->|Validation| SpringBoot
+    SpringBoot <-->|Spring Data JPA| DB
     
-    %% OAuth2 인증 흐름 (핵심 수정 부분)
-    React -- "1. 인증 요청" --> Google
-    React -- "1. 인증 요청" --> Kakao
+    React -- "주소 검색" --> Kakao
+    React -- "로그인 요청" --> OAuth
+    SpringBoot -- "결제 승인/토큰 검증" --> Kakao
     
-    Google -- "2. 인증 코드/토큰 전달" --> React
-    Kakao -- "2. 인증 코드/토큰 전달" --> React
-    
-    React -- "3. 검증 요청 (Auth Code/Token)" --> SpringBoot
-    
-    %% 백엔드 내부 및 외부 통신
-    SpringBoot -- "4. 사용자 정보 확인" --> Google
-    SpringBoot -- "4. 사용자 정보 확인" --> Kakao
-    
-    SpringBoot -- "5. 회원가입/로그인 & JWT 발급" --> DB
-    SpringBoot -- "6. 발급된 JWT 반환" --> React
-
-    %% 일반 데이터 통신
-    React <-->|Axios: JWT Header| Security
+    React -.->|sessionStorage| Sidebar[최근 본 상품]
 ```
