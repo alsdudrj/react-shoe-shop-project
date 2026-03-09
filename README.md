@@ -50,6 +50,13 @@ Backend: REST API 기반
 
 ## 호스팅 주소
 - [링크](https://react-project-14mq.vercel.app/)
+### 계정
+- Admin계정
+  ID: admin1
+  PW: 123456!
+- User 계정
+  ID: user1
+  PW: 123456!
 
 ## 화면 예시
 <details>
