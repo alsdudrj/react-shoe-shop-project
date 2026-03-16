@@ -32,13 +32,14 @@
 - Spring Boot
 
 ## 프로젝트 구조
-Frontend: SPA 구조  
-Backend: REST API 기반
+SPA구조의 프론트엔드에 
+REST API 기반 Stateless 방식
 
 ## Hosting Server
 - 프론트엔드: Vercel
 - 백엔드: Render
 - DB: Postgres DB (SupaBase)
+- 서버유지 : UptimeRobot / cron-job.org
 
 ## 사용된 API
 - 카카오 로그인 / 페이 / 주소검색
